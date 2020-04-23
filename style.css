@@ -1,0 +1,15 @@
+.start-button {
+    text-align: center;
+    align-content: center;
+    padding: 40px;
+}
+
+.high-scores {
+    text-align: left;
+    align-content: left;
+}
+
+.timer  {
+    text-align: right;
+    align-content: right;
+}
