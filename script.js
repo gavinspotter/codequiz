@@ -41,11 +41,11 @@ var testQuestions = [
     {
         testQuestion1: "when was Michelangelo's birthday",
 
-        answers: {
-            a: "March 6",
-            b: "Decemeber 27",
-            c: "June 18",
-        },
+        answers: [
+            "March 6",
+            "Decemeber 27",
+            "June 18",
+        ],
         correctAnswer: "a"
     },
     {
@@ -94,18 +94,21 @@ var initQuestion = document.querySelector("#startQuiz").appendChild(document.cre
 clickBtn.addEventListener("click", function (event) {
     event.preventDefault();
     var startQuiz = document.getElementById("startQuiz")
-    var answer1 = testQuestions[0].answers.a
-    var answer2 = testQuestions[1].answers.b
-    var answer3 = testQuestions[2].answers.b
-    var answer4 = testQuestions[3].answers.b
-    var answer5 = testQuestions[4].answers.c
-    var testQuestion1_1 = JSON.stringify(testQuestions[0].answers.a)
-    var testQuestion1_2 = JSON.stringify(testQuestions[0].answers.b)
-    var testQuestion_3 = JSON.stringify(testQuestions[0].answers.c)
-
-
 
     startQuiz.removeChild(startQuiz.children[0])
+
+    var timeInterval = document.querySelector(".timer")
+
+    var setTime = 80
+    var cloc = setInterval(() => {
+        setTime--;
+        timeInterval.textContent = setTime + "seconds left"
+
+        if (setTime === 0) {
+            clearInterval(cloc)
+
+        }
+    }, 1000)
 
 
     var item = document.createElement("div");
@@ -115,7 +118,7 @@ clickBtn.addEventListener("click", function (event) {
     var initQuestion = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
     initQuestion.textContent = testQuestion1
 
-    JSON.stringify
+
 
     console.log(testQuestion1)
 
