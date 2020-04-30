@@ -50,11 +50,11 @@ var testQuestions = [
     },
     {
         testQuestion2: "when was Vincent Van Gogh's birthday",
-        answers: {
-            a: "March 8",
-            b: "March 30",
-            c: "December 3"
-        },
+        answers: [
+            "March 8",
+            "March 30",
+            "December 3"
+        ],
         correctAnswer: "b"
     },
     {
@@ -87,9 +87,10 @@ var testQuestions = [
 ]
 
 var clickBtn = document.querySelector("#clickBtn");
-var initQuestion = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
 
+var setTime = 80
 
+var TOrF = document.querySelector(".TOrF")
 
 clickBtn.addEventListener("click", function (event) {
     event.preventDefault();
@@ -99,7 +100,7 @@ clickBtn.addEventListener("click", function (event) {
 
     var timeInterval = document.querySelector(".timer")
 
-    var setTime = 80
+
     var cloc = setInterval(() => {
         setTime--;
         timeInterval.textContent = setTime + "seconds left"
@@ -111,78 +112,83 @@ clickBtn.addEventListener("click", function (event) {
     }, 1000)
 
 
-    var item = document.createElement("div");
-    item.textContent = testQuestion1;
-    startQuiz.append(item);
-
-    var initQuestion = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
-    initQuestion.textContent = testQuestion1
 
 
+    var question1q = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
+    question1q.textContent = testQuestions[0].testQuestion1
 
-    console.log(testQuestion1)
+    var questionbr = () => { document.querySelector("#startQuiz").appendChild(document.createElement("br")) }
 
-    addEventListener("click", function () {
+    questionbr();
+
+    var question1_1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    question1_1.addEventListener("click", () => {
+        true
+    })
+    question1_1.textContent = testQuestions[0].answers[0]
+    questionbr();
+
+    var question1_2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    question1_2.addEventListener("click", () => {
+        false
 
     })
+    question1_2.textContent = testQuestions[0].answers[1]
+    questionbr();
 
-    addEventListener("click", function () {
+    var question1_3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    question1_3.addEventListener("click", () => {
+        false
+        if (question1_3) {
+            threeSecInt()
+            q2fun()
 
+        }
     })
-
-    addEventListener("click", function () {
-
-    })
-
-    addEventListener("click", function () {
-
-    })
-
-    addEventListener("click", function () {
-
-    })
-
-    var question1 = function () {
-        var item = document.createElement("div");
-        item.textContent = testQuestion1;
-        startQuiz.append(item);
-
-    }
+    question1_3.textContent = testQuestions[0].answers[2]
 
 
+    var threeSecInt = setInterval(() => {
+        TOrF.textContent = "False"
 
-
-
+        clearInterval(threeSecInt)
+        q2fun();
+    }, 2000)
 
 
 })
 
-if (testQuestions[0].answers.a === true) {
+var q2fun = () => {
+    var question2q = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
+    question2q.textContent = testQuestions[1].testQuestion2
 
-} else {
+    var questionbr = () => { document.querySelector("#startQuiz").appendChild(document.createElement("br")) }
+
+    questionbr();
+
+    var question1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    question1_1.addEventListener("click", () => {
+        true
+    })
+    question1.textContent = testQuestions[1].answers[0]
+    questionbr();
+
+    var question2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    question2.addEventListener("click", () => {
+        false
+
+    })
+    question2.textContent = testQuestions[1].answers[1]
+    questionbr();
+
+    var question3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    question3.addEventListener("click", () => {
+        false
+        if (question3) {
+            threeSecInt()
+
+        }
+    })
+    question1_3.textContent = testQuestions[1].answers[2]
 
 }
-
-if (testQuestions[1].answers.b === true) {
-
-} else {
-
-}
-
-if (testQuestions[2].answers.b === true) {
-
-} else {
-
-}
-if (testQuestions[3].answers.b === true) {
-
-} else {
-
-}
-if (testQuestions[4].answers.c === true) {
-
-} else {
-
-}
-
-
