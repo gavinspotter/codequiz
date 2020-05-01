@@ -135,7 +135,8 @@ var q1fun = () => {
         answerTrue()
         var itsTorF = setInterval(() => {
             q2fun();
-            clearInterval(itsFalse)
+            clearInterval(itsTorF)
+            return
         }, 1500)
 
     })
@@ -147,7 +148,8 @@ var q1fun = () => {
         answerFalse()
         var itsTorF = setInterval(() => {
             q2fun();
-            clearInterval(itsFalse)
+            clearInterval(itsTorF)
+            return
         }, 1500)
     })
     answer2.textContent = testQuestions[0].answers[1]
@@ -158,7 +160,8 @@ var q1fun = () => {
         answerFalse();
         var itsTorF = setInterval(() => {
             q2fun();
-            clearInterval(itsFalse)
+            clearInterval(itsTorF)
+            return
         }, 1500)
 
 
@@ -207,6 +210,116 @@ var q2fun = () => {
 
 }
 
+var q3fun = () => {
+
+    startQuiz.textContent = ""
+    TOrF.textContent = ""
+    var question = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
+    question.textContent = testQuestions[2].testQuestion
+
+    var questionbr = () => { document.querySelector("#startQuiz").appendChild(document.createElement("br")) }
+
+    questionbr();
+
+    var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer1.addEventListener("click", () => {
+
+        q4fun();
+    })
+    answer1.textContent = testQuestions[2].answers[0]
+    questionbr();
+
+    var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer2.addEventListener("click", () => {
+
+        q4fun();
+    })
+    answer2.textContent = testQuestions[2].answers[1]
+    questionbr();
+
+    var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer3.addEventListener("click", () => {
+
+        q4fun();
+
+    })
+    answer3.textContent = testQuestions[2].answers[2]
+
+}
+
+var q4fun = () => {
+
+    startQuiz.textContent = ""
+    TOrF.textContent = ""
+    var question = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
+    question.textContent = testQuestions[3].testQuestion
+
+    var questionbr = () => { document.querySelector("#startQuiz").appendChild(document.createElement("br")) }
+
+    questionbr();
+
+    var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer1.addEventListener("click", () => {
+
+        q5fun();
+    })
+    answer1.textContent = testQuestions[3].answers[0]
+    questionbr();
+
+    var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer2.addEventListener("click", () => {
+
+        q5fun();
+    })
+    answer2.textContent = testQuestions[3].answers[1]
+    questionbr();
+
+    var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer3.addEventListener("click", () => {
+
+        q5fun();
+
+    })
+    answer3.textContent = testQuestions[3].answers[2]
+
+}
+
+var q5fun = () => {
+
+    startQuiz.textContent = ""
+    TOrF.textContent = ""
+    var question = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
+    question.textContent = testQuestions[4].testQuestion
+
+    var questionbr = () => { document.querySelector("#startQuiz").appendChild(document.createElement("br")) }
+
+    questionbr();
+
+    var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer1.addEventListener("click", () => {
+
+
+    })
+    answer1.textContent = testQuestions[4].answers[0]
+    questionbr();
+
+    var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer2.addEventListener("click", () => {
+
+
+    })
+    answer2.textContent = testQuestions[4].answers[1]
+    questionbr();
+
+    var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
+    answer3.addEventListener("click", () => {
+
+
+
+    })
+    answer3.textContent = testQuestions[4].answers[2]
+
+}
 
 var answerTrue = () => {
     TOrF.textContent = "True"
