@@ -136,7 +136,7 @@ var q1fun = () => {
         var itsTorF = setInterval(() => {
             q2fun();
             clearInterval(itsTorF)
-            return
+
         }, 1500)
 
     })
@@ -149,7 +149,7 @@ var q1fun = () => {
         var itsTorF = setInterval(() => {
             q2fun();
             clearInterval(itsTorF)
-            return
+
         }, 1500)
     })
     answer2.textContent = testQuestions[0].answers[1]
@@ -161,7 +161,7 @@ var q1fun = () => {
         var itsTorF = setInterval(() => {
             q2fun();
             clearInterval(itsTorF)
-            return
+
         }, 1500)
 
 
@@ -185,24 +185,39 @@ var q2fun = () => {
 
     var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer1.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
+            q3fun();
+            clearInterval(itsTorF)
 
-        q3fun();
+        }, 1500)
+
     })
     answer1.textContent = testQuestions[1].answers[0]
     questionbr();
 
     var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer2.addEventListener("click", () => {
+        answerTrue()
+        var itsTorF = setInterval(() => {
+            q3fun()
+            clearInterval(itsTorF)
 
-        q3fun();
+        }, 1500)
+
     })
     answer2.textContent = testQuestions[1].answers[1]
     questionbr();
 
     var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer3.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
+            q3fun();
+            clearInterval(itsTorF)
 
-        q3fun();
+        }, 1500)
+
 
     })
     answer3.textContent = testQuestions[1].answers[2]
@@ -223,24 +238,39 @@ var q3fun = () => {
 
     var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer1.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
+            q4fun();
+            clearInterval(itsTorF)
 
-        q4fun();
+        }, 1500)
+
     })
     answer1.textContent = testQuestions[2].answers[0]
     questionbr();
 
     var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer2.addEventListener("click", () => {
+        answerTrue()
+        var itsTorF = setInterval(() => {
+            q4fun()
+            clearInterval(itsTorF)
 
-        q4fun();
+        }, 1500)
+
     })
     answer2.textContent = testQuestions[2].answers[1]
     questionbr();
 
     var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer3.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
+            q4fun();
+            clearInterval(itsTorF)
 
-        q4fun();
+        }, 1500)
+
 
     })
     answer3.textContent = testQuestions[2].answers[2]
@@ -260,24 +290,39 @@ var q4fun = () => {
 
     var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer1.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
+            q5fun();
+            clearInterval(itsTorF)
 
-        q5fun();
+        }, 1500)
+
     })
     answer1.textContent = testQuestions[3].answers[0]
     questionbr();
 
     var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer2.addEventListener("click", () => {
+        answerTrue()
+        var itsTorF = setInterval(() => {
+            q5fun();
+            clearInterval(itsTorF)
 
-        q5fun();
+        }, 1500)
+
     })
     answer2.textContent = testQuestions[3].answers[1]
     questionbr();
 
     var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer3.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
+            q5fun();
+            clearInterval(itsTorF)
 
-        q5fun();
+        }, 1500)
+
 
     })
     answer3.textContent = testQuestions[3].answers[2]
@@ -297,7 +342,12 @@ var q5fun = () => {
 
     var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer1.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
 
+            clearInterval(itsTorF)
+
+        }, 1500)
 
     })
     answer1.textContent = testQuestions[4].answers[0]
@@ -305,7 +355,12 @@ var q5fun = () => {
 
     var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer2.addEventListener("click", () => {
+        answerFalse();
+        var itsTorF = setInterval(() => {
 
+            clearInterval(itsTorF)
+
+        }, 1500)
 
     })
     answer2.textContent = testQuestions[4].answers[1]
@@ -314,7 +369,12 @@ var q5fun = () => {
     var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer3.addEventListener("click", () => {
 
+        answerTrue()
+        var itsTorF = setInterval(() => {
 
+            clearInterval(itsTorF)
+
+        }, 1500)
 
     })
     answer3.textContent = testQuestions[4].answers[2]
