@@ -93,6 +93,8 @@ var setTime = 80
 var TOrF = document.querySelector(".TOrF")
 var startQuiz = document.getElementById("startQuiz")
 
+
+
 clickBtn.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -130,23 +132,35 @@ var q1fun = () => {
 
     var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer1.addEventListener("click", () => {
-        true
+        answerTrue()
+        var itsTorF = setInterval(() => {
+            q2fun();
+            clearInterval(itsFalse)
+        }, 1500)
+
     })
     answer1.textContent = testQuestions[0].answers[0]
     questionbr();
 
     var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer2.addEventListener("click", () => {
-        false
-
+        answerFalse()
+        var itsTorF = setInterval(() => {
+            q2fun();
+            clearInterval(itsFalse)
+        }, 1500)
     })
     answer2.textContent = testQuestions[0].answers[1]
     questionbr();
 
     var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer3.addEventListener("click", () => {
-        false
-        q2fun();
+        answerFalse();
+        var itsTorF = setInterval(() => {
+            q2fun();
+            clearInterval(itsFalse)
+        }, 1500)
+
 
     })
     answer3.textContent = testQuestions[0].answers[2]
@@ -154,8 +168,11 @@ var q1fun = () => {
 
 }
 
+
+
 var q2fun = () => {
     startQuiz.textContent = ""
+    TOrF.textContent = ""
     var question = document.querySelector("#startQuiz").appendChild(document.createElement("div"))
     question.textContent = testQuestions[1].testQuestion
 
@@ -165,23 +182,24 @@ var q2fun = () => {
 
     var answer1 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer1.addEventListener("click", () => {
-        true
+
+        q3fun();
     })
     answer1.textContent = testQuestions[1].answers[0]
     questionbr();
 
     var answer2 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer2.addEventListener("click", () => {
-        false
 
+        q3fun();
     })
     answer2.textContent = testQuestions[1].answers[1]
     questionbr();
 
     var answer3 = document.querySelector("#startQuiz").appendChild(document.createElement("button"))
     answer3.addEventListener("click", () => {
-        false
-        q2fun();
+
+        q3fun();
 
     })
     answer3.textContent = testQuestions[1].answers[2]
@@ -190,6 +208,16 @@ var q2fun = () => {
 }
 
 
+var answerTrue = () => {
+    TOrF.textContent = "True"
+}
+
+var answerFalse = () => {
+    setTime -= 9
+    TOrF.textContent = "False"
+
+
+}
 
 
 
