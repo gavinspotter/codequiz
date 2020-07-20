@@ -329,6 +329,8 @@ var q5fun = () => {
   answer1.addEventListener("click", () => {
     answerFalse();
     clocTime = true;
+    localStorage.setItem("cloctime", setTime)
+
   });
   answer1.textContent = testQuestions[4].answers[0];
   questionbr();
@@ -339,6 +341,7 @@ var q5fun = () => {
   answer2.addEventListener("click", () => {
     answerFalse();
     clocTime = true;
+    localStorage.setItem("cloctime", setTime)
   });
   answer2.textContent = testQuestions[4].answers[1];
   questionbr();
@@ -349,9 +352,16 @@ var q5fun = () => {
   answer3.addEventListener("click", () => {
     answerTrue();
     clocTime = true;
+    localStorage.setItem("cloctime", setTime)
   });
   answer3.textContent = testQuestions[4].answers[2];
 };
+
+var allDone = () => {
+    
+
+}
+
 
 var answerTrue = () => {
   TOrF.textContent = "True";
